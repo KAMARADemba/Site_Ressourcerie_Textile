@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Site - Feuille en fond</title>
+<style>
+  :root {
+    --olive: #556241;
+    --beige: #f6f6f0;
+    --blue-accent: #0b83ff;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--beige);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Bande en haut */
+  .topbar {
+    height: 72px;
+    background: var(--olive);
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Navbar dans le header */
+  .navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centre les liens horizontalement */
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* espace entre les liens */
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar ul li a:hover {
+    color: var(--blue-accent); /* couleur au survol */
+  }
+
+  /* Feuilles décoratives en arrière-plan */
+  .feuille-gauche,
+  .feuille-droite {
+    position: fixed; /* restent derrière tout */
+    width: 400px;
+    opacity: 0.9;
+    z-index: 0; /* derrière header, main et footer */
+    pointer-events: none; /* ne bloque pas les clics */
+  }
+
+  .feuille-gauche {
+    top: -20px;
+    left: -110px;
+    transform: rotate(-270deg);
+  }
+
+  .feuille-droite {
+    bottom: -30px;
+    right: -130px;
+    transform: scaleX(-1) rotate(-20deg);
+  }
+
+  /* Zone centrale */
+  .main {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1; /* contenu au-dessus des feuilles */
+  }
+
+  /* Carte blanche */
+  .card {
+    width: min(600px, 88vw);
+    min-height: 600px;
+    background: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    padding: 36px;
+    z-index: 1; /* au-dessus des feuilles */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Effet hover sur la carte */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+
+  /* Bande en bas */
+  .bottombar {
+    height: 28px;
+    background: var(--olive);
+    flex: 0 0 auto;
+    border-top: 3px solid var(--blue-accent);
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <!-- Feuilles décoratives en arrière-plan -->
+  <img src="feuille.png" alt="Feuille décorative" class="feuille-gauche">
+  <img src="feuille.png" alt="Feuille décorative" class="feuille-droite">
+
+  <!-- Header -->
+  <div class="topbar">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Catalogue</a></li>
+        <li><a href="#">Nous conaître</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Contenu principal -->
+  <main class="main">
+    <div class="card">
+      <h1>Titre</h1>
+      <p>texte</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div class="bottombar"></div>
+</body>
+</html>

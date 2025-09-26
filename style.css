@@ -1,0 +1,27 @@
+/* Navbar dans le header */
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centre les liens horizontalement */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* espace entre les liens */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: var(--blue-accent); /* couleur au survol */
+}
