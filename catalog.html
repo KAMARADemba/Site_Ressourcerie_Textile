@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoShop - Catalogue</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">EcoShop</a>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="catalog.html" aria-current="page">Catalogue</a></li>
+
+      </ul>
+      <!-- Conteneur d'icônes -->
+      <div class="nav-icons">
+        <a href="login.html" class="user-icon"><i class="fa-solid fa-user"></i></a>
+        <a href="cart.html" class="user-icon" aria-label="Panier"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="localisation.html" class="user-icon" aria-label="Localisation"><i class="fa-solid fa-location-dot"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="catalog">
+      <h2>Nos Produits</h2>
+
+      <!-- Filtres -->
+      <div class="filter-bar">
+        <select>
+          <option>Trier par</option>
+          <option>Prix croissant</option>
+          <option>Prix décroissant</option>
+        </select>
+      </div>
+
+      <!-- Produits -->
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="img/eco-bottle.jpg" alt="Gourde Éco">
+          <h3>Gourde Éco</h3>
+          <p class="price">15 €</p>
+          <p class="rating">⭐⭐⭐⭐☆</p>
+          <button class="cta-button">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+          <img src="img/eco-bag.jpg" alt="Sac Réutilisable">
+          <h3>Sac Réutilisable</h3>
+          <p class="price">10 €</p>
+          <p class="rating">⭐⭐⭐☆☆</p>
+          <button class="cta-button">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+          <img src="img/eco-straw.jpg" alt="Pailles Bambou">
+          <h3>Pailles Bambou</h3>
+          <p class="price">8 €</p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+          <button class="cta-button">Ajouter au panier</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoShop - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
