@@ -195,10 +195,40 @@ main {
     margin-bottom: 0.5rem;
     color: #5C6646;
 }
-.product-card button {
-    margin-top: 0.5rem;
+.about-card h3 {
+    margin-bottom: 0.5rem;
+    color: #5C6646;
+}
+.bouton-descendre {
+    margin-top: 2.5rem !important; /* ou essaye 3rem, 4rem selon le rendu souhaité */
+}
+.img-container {
+  position: relative;
+  display: inline-block;
 }
 
+.img-legend {
+  visibility: hidden;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.95em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.img-container:hover .img-legend {
+  visibility: visible;
+  opacity: 1;
+}
 /* ------------------- */
 /* Contact             */
 /* ------------------- */
