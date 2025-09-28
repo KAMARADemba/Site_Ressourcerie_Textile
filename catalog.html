@@ -34,10 +34,10 @@
 
       <!-- Filtres -->
       <div class="filter-bar">
-        <select>
-          <option>Trier par</option>
-          <option>Prix croissant</option>
-          <option>Prix décroissant</option>
+        <select id="sort-select">
+          <option value="">Trier par</option>
+          <option value="asc">Prix croissant</option>
+          <option value="desc">Prix décroissant</option>
         </select>
       </div>
 <div class="products-grid">
@@ -129,7 +129,8 @@
   <footer>
     <p>&copy; 2025 ReFil - Ressourcerie Textile. Tous droits réservés.</p>
   </footer>
-
+  
+  <script src="js/catalog.js"></script>
   <script src="js/cart.js"></script>
 </body>
 </html>
