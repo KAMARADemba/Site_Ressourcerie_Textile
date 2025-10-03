@@ -3,122 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catalogue de la Ressourcerie du fil solidaire — vêtements, chaussures et accessoires de seconde main.">
-  <title>Ressourcerie — Catalogue</title>
-
-  <!-- Preload CSS non bloquant -->
-  <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
-
+  <title>EcoShop - Catalogue</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/ico" href="favicon.ico">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Aller au contenu</a>
 
-  <header role="banner">
-    <nav role="navigation" aria-label="Navigation principale">
-        <a href="index.html" class="logo" aria-label="Accueil — Ressourcerie">
-            <img src="logo.png" alt="Logo Ressourcerie" style="height:48px;" loading="lazy" width="150" height="48">
+
+  <header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo Ressourcerie" style="height:48px;">
         </a>
         <ul>
             <li><a href="index.html" aria-current="page">Accueil</a></li>
             <li><a href="catalog.html">Catalogue</a></li>
             <li><a href="nousConnaître.html">Nous Connaître</a></li>
         </ul>
-
-        <!-- Icônes SVG inline pour éviter les requêtes externes -->
-        <div class="nav-icons" role="group" aria-label="Actions">
-          <a href="login.html" class="user-icon" aria-label="Se connecter">
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12a5 5 0 100-10 5 5 0 000 10z" fill="#fff"/><path d="M3 21a9 9 0 0118 0" fill="#fff"/></svg>
-          </a>
-          <a href="cart.html" class="user-icon" aria-label="Panier">
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6h15l-1.5 9h-11z" fill="#fff"/><circle cx="9" cy="20" r="1" fill="#fff"/><circle cx="18" cy="20" r="1" fill="#fff"/></svg>
-          </a>
-          <a href="localisation.html" class="user-icon" aria-label="Localisation">
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" fill="#fff"/><circle cx="12" cy="9" r="2" fill="#5C6646"/></svg>
-          </a>
-        </div>
-    </nav>
+        <!-- Conteneur d'icônes -->
+            <div class="nav-icons">
+            <a href="login.html" class="user-icon"><i class="fa-solid fa-user"></i></a>
+            <a href="cart.html" class="user-icon" aria-label="Panier"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="localisation.html" class="user-icon" aria-label="Localisation"><i class="fa-solid fa-location-dot"></i></a>
+            </div>
+        </nav>
   </header>
 
-  <main id="main-content" role="main">
-    <section class="catalog" aria-labelledby="catalog-title">
-      <h2 id="catalog-title">Nos Produits</h2>
+  <main>
+    <section class="catalog">
+      <h2>Nos Produits</h2>
 
       <!-- Filtres -->
-      <div class="filter-bar" role="region" aria-label="Filtres et tri">
-        <label for="sort-select" class="visually-hidden">Trier les produits</label>
-        <select id="sort-select" aria-controls="products-list">
+      <div class="filter-bar">
+        <select id="sort-select">
           <option value="">Trier par</option>
           <option value="asc">Prix croissant</option>
           <option value="desc">Prix décroissant</option>
         </select>
       </div>
+      
+<div class="products-grid">
+  <div class="product-card">
+    <div class="img-container">
+      <img src="veste.jpg" alt="Veste">
+      <span class="img-legend">Veste Zara taille L</span>
+    </div>
+    <h3>Veste</h3>
+    <p class="price">15 €</p>
+    <p class="rating">⭐⭐⭐⭐☆</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
+  </div>
+  <div class="product-card">
+    <div class="img-container">
+      <img src="casquette.jpg" alt="Casquette">
+      <span class="img-legend">Casquette taille standard</span>
+    </div>
+    <h3>Casquette</h3>
+    <p class="price">5 €</p>
+    <p class="rating">⭐⭐⭐☆☆</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
+  </div>
+  <div class="product-card">
+    <div class="img-container">
+      <img src="gillet.jpg" alt="Gillet">
+      <span class="img-legend">Gillet sézane en laine taille S</span>
+    </div>
+    <h3>Gillet</h3>
+    <p class="price">20 €</p>
+    <p class="rating">⭐⭐⭐☆☆</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
+  </div>
+  <div class="product-card">
+    <div class="img-container">
+      <img src="samba.jpg" alt="Chaussures">
+      <span class="img-legend">Adidas Original Samba pointure 38</span>
+    </div>
+    <h3>Adidas Samba</h3>
+    <p class="price">20 €</p>
+    <p class="rating">⭐⭐⭐⭐⭐</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
+  </div>
+  <div class="product-card">
+    <div class="img-container">
+      <img src="jean.jpg" alt="Jean Femme">
+      <span class="img-legend">Jean Bleu pour femme taille Xs</span>
+    </div>
+    <h3>Jean Femme</h3>
+    <p class="price">12 €</p>
+    <p class="rating">⭐⭐⭐⭐☆</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
+  </div>
+  <div class="product-card">
+    <div class="img-container">
+      <img src="pull.jpeg" alt="Pull">
+      <span class="img-legend">Pull Zara pour homme taille M</span>
+    </div>
+    <h3>Pull</h3>
+    <p class="price">8 €</p>
+    <p class="rating">⭐⭐⭐☆☆</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
+  </div>
+  <div class="product-card">
+    <div class="img-container">
+      <img src="tshirt.jpeg" alt="T-shirt">
+      <span class="img-legend">T-shirt Polo Ralph Lauren taille L</span>
+    </div>
+    <h3>T-shirt</h3>
+    <p class="price">15 €</p>
+    <p class="rating">⭐⭐⭐⭐☆</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
+  </div>
+  <div class="product-card">
+    <div class="img-container">
+      <img src="jeanH.jpeg" alt="Jean">
+      <span class="img-legend">Jean Homme taille XL</span>
+    </div>
+    <h3>Jean Homme</h3>
+    <p class="price">12 €</p>
+    <p class="rating">⭐⭐⭐⭐⭐</p>
+    <button class="cta-button bouton-descendre">Ajouter au panier</button>
 
-      <div class="products-grid" id="products-list" role="list">
-        <!-- Exemple de product-card optimisée : ajouter srcset + lazy -->
-        <article class="product-card" role="listitem">
-          <figure class="img-container">
-            <picture>
-              <source srcset="veste.webp" type="image/webp">
-              <img src="veste.jpg"
-                   alt="Veste Zara taille L"
-                   loading="lazy"
-                   width="600"
-                   height="400"
-                   srcset="veste-480.jpg 480w, veste-800.jpg 800w"
-                   sizes="(max-width: 600px) 100vw, 600px">
-            </picture>
-            <figcaption class="img-legend">Veste Zara taille L</figcaption>
-          </figure>
-          <h3>Veste</h3>
-          <p class="price" aria-label="Prix 15 euros">15 €</p>
-          <p class="rating" aria-hidden="true">⭐⭐⭐⭐☆</p>
-          <button class="cta-button bouton-descendre" aria-label="Ajouter Veste au panier">Ajouter au panier</button>
-        </article>
-
-        <article class="product-card" role="listitem">
-          <figure class="img-container">
-            <picture>
-              <source srcset="casquette.webp" type="image/webp">
-              <img src="casquette.jpg" alt="Casquette" loading="lazy" width="400" height="300" srcset="casquette-400.jpg 400w, casquette-800.jpg 800w" sizes="(max-width: 600px) 100vw, 400px">
-            </picture>
-            <figcaption class="img-legend">Casquette taille standard</figcaption>
-          </figure>
-          <h3>Casquette</h3>
-          <p class="price" aria-label="Prix 5 euros">5 €</p>
-          <p class="rating" aria-hidden="true">⭐⭐⭐☆☆</p>
-          <button class="cta-button bouton-descendre" aria-label="Ajouter Casquette au panier">Ajouter au panier</button>
-        </article>
-
-        <article class="product-card" role="listitem">
-          <figure class="img-container">
-            <picture>
-              <source srcset="gillet.webp" type="image/webp">
-              <img src="gillet.jpg" alt="Gillet" loading="lazy" width="600" height="400" srcset="gillet-480.jpg 480w, gillet-800.jpg 800w" sizes="(max-width: 600px) 100vw, 600px">
-            </picture>
-            <figcaption class="img-legend">Gillet sézane en laine taille S</figcaption>
-          </figure>
-          <h3>Gillet</h3>
-          <p class="price" aria-label="Prix 20 euros">20 €</p>
-          <p class="rating" aria-hidden="true">⭐⭐⭐☆☆</p>
-          <button class="cta-button bouton-descendre" aria-label="Ajouter Gillet au panier">Ajouter au panier</button>
-        </article>
-
-        <!-- Reste des cards (samba, jean, pull, tshirt, jeanH) : appliquer mêmes patterns -->
-      </div>
+  </div>
+</div>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p>&copy; 2025 Ressourcerie du fil solidaire.</p>
-    <a href="https://www.instagram.com/iutaixmars/" target="_blank" rel="noopener noreferrer">
-      <img src="instagram.png" alt="Instagram" loading="lazy" width="32" height="32">
-    </a>
+  <footer>
+        <p>&copy; 2025 Ressourcerie du fil solidaire.</p>
+          <a href="https://www.instagram.com/iutaixmars/" target="_blank">
+          <img src="instagram.png" alt="Instagram" style="height:32px;">
+        </a>
   </footer>
 
-  <!-- Scripts non bloquants + minifiés en production -->
-  <script src="js/catalog.js" defer></script>
-  <script src="js/cart.js" defer></script>
+  <script src="js/cart.js"></script>
+  <script src="js/catalog.js"></script>
 </body>
 </html>
